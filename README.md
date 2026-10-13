@@ -7,6 +7,28 @@
 
 ---
 
+## Verified offline workflow
+
+`ml_workflow.py` is the maintained, runnable course demonstration. It compares
+four regression approaches on a deterministic **fictional fixture**, selects a
+winner using training-only five-fold out-of-fold predictions, and evaluates
+that winner once on a disjoint holdout:
+
+```bash
+python -m pip install -r requirements.txt
+python ml_workflow.py --output artifacts/receipt.json
+python -m pytest -q
+```
+
+The output is a reproducible workflow receipt, not a claim about real housing
+prices, model accuracy in production, or deployment performance. The original
+course files remain unchanged as archival exercises; some require private or
+remote datasets and are not part of this verified path.
+
+<!-- DEMO_MEDIA_PLACEHOLDER -->
+
+---
+
 ## 🚀 Course Focus  
 This course blends **core programming skills** with **AI/ML applications** for economic analysis, emphasizing:  
 - **Python proficiency** for econometric modeling  
