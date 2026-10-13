@@ -1,0 +1,59 @@
+{
+  "artifacts": {
+    "model-selection-demo.gif": {
+      "bytes": 89458,
+      "probe": {
+        "format": {
+          "duration": "17.000000"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "height": 540,
+            "nb_read_frames": "5",
+            "width": 960
+          }
+        ]
+      },
+      "sha256": "3ed3bf1f472ee6d9f14bdb60db917096851875dfe690d38963bec6a04f4219b3"
+    },
+    "model-selection-demo.mp4": {
+      "bytes": 105673,
+      "probe": {
+        "format": {
+          "duration": "17.000000"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "height": 540,
+            "nb_read_frames": "170",
+            "width": 960
+          }
+        ]
+      },
+      "sha256": "119b774b994561f28f8c66aac722e8fb9bbe9aa78d1431432790ca21f5a4e43a"
+    },
+    "poster.png": {
+      "bytes": 27630,
+      "sha256": "9569967e1ac394fbc399eae32a3b5c1cf621b5e695593769b24fc6c0f21327a5"
+    },
+    "workflow-receipt.json": {
+      "bytes": 1102,
+      "sha256": "1e7b3c1bff21c6ec6d0642e34488449439cc7151c4b527ef2430a58020a4023a"
+    }
+  },
+  "command": "python scripts/generate_demo.py",
+  "schema_version": 1,
+  "scope": "deterministic synthetic fixture; no real-world accuracy, scale, deployment, or performance claim",
+  "seed": 8257,
+  "source_blobs": {
+    "ml_workflow.py": "868290c44b7f31e9b66078ab282fd55e977ce17f",
+    "requirements.txt": "1a0f9d83393726583df7ec5a78041244338f6a60",
+    "scripts/generate_demo.py": "1369fd9824f4bbe4a765240209d01d9acd5ec597",
+    "scripts/verify_demo.py": "e277570fab453e08eec20f9b392a43f85cb0623d",
+    "tests/test_ml_workflow.py": "f711ff96bd24dd1a4e5adf426ebe969f3dcd235b"
+  },
+  "source_commit": "62a613e651dc44e18147c04ee6c20315e2f29d95",
+  "source_tree": "fb562784c10f1e2704226c8029f4c7e541e0b813"
+}

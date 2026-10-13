@@ -25,7 +25,11 @@ prices, model accuracy in production, or deployment performance. The original
 course files remain unchanged as archival exercises; some require private or
 remote datasets and are not part of this verified path.
 
-<!-- DEMO_MEDIA_PLACEHOLDER -->
+![Leakage-safe model-selection demo](docs/demo/model-selection-demo.gif)
+
+[Watch the MP4](docs/demo/model-selection-demo.mp4) ·
+[Inspect the machine-readable workflow receipt](docs/demo/workflow-receipt.json) ·
+[Verify capture provenance](docs/demo/capture.json)
 
 ---
 
