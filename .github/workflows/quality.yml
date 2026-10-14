@@ -27,7 +27,16 @@ jobs:
           sudo apt-get update
           sudo apt-get install --yes ffmpeg
       - run: python -m pip install --upgrade pip
-      - run: python -m pip install -r requirements.txt
+      - run: python -m pip install -r requirements-course.txt
       - run: python -m pytest -q
       - run: python ml_workflow.py --output artifacts/receipt.json
       - run: python scripts/verify_demo.py
+      - name: Execute repaired original course workflows
+        run: |
+          python ml1.py --fixture --output artifacts/ten-models.json
+          python model_selection.py --fixture --output artifacts/second-entry-point.json
+          python crimeee.py --fixture --output artifacts/crime-regressions.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: course-receipts-${{ matrix.python-version }}
+          path: artifacts/*.json
