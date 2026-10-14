@@ -34,6 +34,8 @@ def prepare(frame):
     missing = set(REQUIRED) - set(frame.columns)
     if missing:
         raise ValueError(f"missing columns: {sorted(missing)}")
+    if frame.empty:
+        raise ValueError("crime panel must contain observations")
     frame = frame[REQUIRED].copy()
     try:
         frame = frame.apply(pd.to_numeric, errors="raise")

@@ -91,3 +91,12 @@ def test_duplicate_csv_headers_fail_before_pandas_mangles_names(tmp_path):
     path.write_text('a,a,MEDV\n' + '1,2,3\n' * 40)
     with pytest.raises(ValueError, match='duplicate'):
         load_csv(path, 'MEDV')
+
+
+def test_crime_empty_and_invalid_log_values_are_rejected():
+    frame = fixture()
+    with pytest.raises(ValueError, match='contain observations'):
+        prepare(frame.iloc[:0])
+    frame.loc[0, 'population'] = 0
+    with pytest.raises(ValueError, match='finite and positive'):
+        prepare(frame)
