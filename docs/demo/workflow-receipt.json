@@ -1,0 +1,48 @@
+{
+  "candidates": [
+    {
+      "cv_mae": 1.1687444720554094,
+      "cv_rmse": 1.4473753565978233,
+      "name": "quadratic_ridge",
+      "oof_rows": 192
+    },
+    {
+      "cv_mae": 2.4893137375797414,
+      "cv_rmse": 3.8822776228293794,
+      "name": "random_forest",
+      "oof_rows": 192
+    },
+    {
+      "cv_mae": 2.7947665389080445,
+      "cv_rmse": 3.913776213466312,
+      "name": "log_linear",
+      "oof_rows": 192
+    },
+    {
+      "cv_mae": 2.8661601054292922,
+      "cv_rmse": 4.030006626833789,
+      "name": "linear",
+      "oof_rows": 192
+    }
+  ],
+  "claims": [
+    "Fictional deterministic fixture",
+    "Final holdout excluded from model selection",
+    "No real-world accuracy or deployment claim"
+  ],
+  "feature_count": 6,
+  "holdout": {
+    "mae": 1.1479749739154352,
+    "r2": 0.9671081457444465,
+    "rmse": 1.3981412906260149
+  },
+  "holdout_rows": 48,
+  "mode": "synthetic_fixture",
+  "rows": 240,
+  "schema_version": 1,
+  "seed": 8257,
+  "selection_metric": "five_fold_training_oof_rmse",
+  "split_integrity": true,
+  "train_rows": 192,
+  "winner": "quadratic_ridge"
+}
